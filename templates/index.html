@@ -12,17 +12,17 @@
 
 <body>
     <div class="container">
-        <h1>Arbit</h1>
+        <h1 id="arbit">Arbit</h1 id="arbit">
         <p class="lead">An API for Random Number Generation.</p>
 
         <p>Arbit (lazily spelled version of <i>Arbitrary</i>) is a simple random number generator for number of scenarios being
             delivered via API.</p>
 
-        <h3>Ratio</h3>
+        <h3 id="ratio">Ratio</h3>
         <hr>
         <p>Generates a ratio/float number (eg. <code>0.8057532537386616</code>).</p>
         <pre>
-Waypoint: /ratio
+Endpoint: /ratio
 Method: GET
 Request URL: /ratio
 Response: {
@@ -35,7 +35,7 @@ Response: {
             <code>0.4060520382255244, 0.7223434561885743, 0.08803317829864132, 0.4463011129852972, 0.5861838877722955</code>).
         </p>
         <pre>
-Waypoint: /ratio/[size]
+Endpoint: /ratio/[size]
 Method: GET
 Request URL: /ratio/5
 Response: {
@@ -50,11 +50,11 @@ Response: {
         }
 </pre>
 
-        <h3>Dice</h3>
+        <h3 id="dice">Dice</h3>
         <hr>
         <p>Generates a dice roll number (eg. <code>5</code>).</p>
         <pre>
-Waypoint: /dice
+Endpoint: /dice
 Method: GET
 Request URL: /dice
 Response: {
@@ -67,7 +67,7 @@ Response: {
             <code>1, 3, 2, 1, 6</code>).
         </p>
         <pre>
-Waypoint: /ratio/[size]
+Endpoint: /ratio/[size]
 Method: GET
 Request URL: /ration/5
 Response: {
@@ -83,7 +83,7 @@ Response: {
 </pre>
 
 
-        <h3>Deck</h3>
+        <h3 id="deck">Deck</h3>
         <hr>
         <p>Picks a card from deck (eg. <code>Eight of Spades</code>).</p>
         <table class="table">
@@ -129,7 +129,7 @@ Response: {
             </tbody>
         </table>
         <pre>
-Waypoint: /deck
+Endpoint: /deck
 Method: GET
 Request URL: /deck
 Response: {
@@ -145,7 +145,7 @@ Response: {
             <code>Jack of Diamond, Queen of Clubs, Ace of Clubs, Seven of Spades, Four of Spades</code>).
         </p>
         <pre>
-Waypoint: /ratio/[size]
+Endpoint: /ratio/[size]
 Method: GET
 Request URL: /ration/5
 Response: {
@@ -175,11 +175,11 @@ Response: {
         }
         </pre>
 
-        <h3>Integer</h3>
+        <h3 id="integer">Integer</h3>
         <hr>
         <p>Generates a random integer between 0 to 99 (eg. <code>36</code>).</p>
         <pre>
-Waypoint: /integer
+Endpoint: /integer
 Method: GET
 Request URL: /integer
 Response: {
@@ -189,7 +189,7 @@ Response: {
 </pre>
 <p>Generates a random integer between 0 to specified maximum value (eg. <code>4</code> between 0-10).</p>
 <pre>
-Waypoint: /integer/[max]
+Endpoint: /integer/[max]
 Method: GET
 Request URL: /integer/10
 Response: {
@@ -199,7 +199,7 @@ Response: {
 </pre>
         <p>Generates a random integer between specified minimum and maximum value (eg. <code>8</code> from range 5-10).</p>
         <pre>
-Waypoint: /integer/[min]/[max]
+Endpoint: /integer/[min]/[max]
 Method: GET
 Request URL: /integer/5/10
 Response: {
@@ -209,7 +209,7 @@ Response: {
 </pre>
         <p>Generates an array of random integer between 0 to 99 (eg. <code>1, 33, 8, 6, 88</code>).</p>
         <pre>
-Waypoint: /integer/n/[size]
+Endpoint: /integer/n/[size]
 Method: GET
 Request URL: /integer/n/5
 Response: {
@@ -225,7 +225,7 @@ Response: {
 </pre>
         <p>Generates an array of integer between 0 to specified maximum value (eg. <code>20,11,8,40,11</code> between 0-50).</p>
         <pre>
-Waypoint: /integer/[max]/n/[size]
+Endpoint: /integer/[max]/n/[size]
 Method: GET
 Request URL: /integer/50/n/5
 Response: {
@@ -241,7 +241,7 @@ Response: {
 </pre>
         <p>Generates an array of random integer between specified minimum and maximum value (eg. <code>8</code> between 5-10).</p>
         <pre>
-Waypoint: /integer/[min]/[max]/n/[size]
+Endpoint: /integer/[min]/[max]/n/[size]
 Method: GET
 Request URL: /integer/5/10/n/5
 Response: {
@@ -256,11 +256,11 @@ Response: {
         }
 </pre>
 
-        <h3>Float</h3>
+        <h3 id="float">Float</h3>
         <hr>
         <p>Generates a random float between 0 to 99 (eg. <code>23.053318383822017</code>).</p>
         <pre>
-Waypoint: /float
+Endpoint: /float
 Method: GET
 Request URL: /float
 Response: {
@@ -270,7 +270,7 @@ Response: {
 </pre>
 		<p>Generates a random float between 0 to specified maximum value (eg. <code>2.9832973745713587</code> between 0-10).</p>
 		<pre>
-Waypoint: /float/[max]
+Endpoint: /float/[max]
 Method: GET
 Request URL: /float/10
 Response: {
@@ -280,7 +280,7 @@ Response: {
 </pre>
         <p>Generates a random float between specified minimum and maximum value (eg. <code>7.314074340121515</code> from range 5-10).</p>
         <pre>
-Waypoint: /float/[min]/[max]
+Endpoint: /float/[min]/[max]
 Method: GET
 Request URL: /float/5/10
 Response: {
@@ -290,7 +290,7 @@ Response: {
 </pre>
         <p>Generates an array of random float between 0 to 99 (eg. <code>1.9450255805004282, 61.92280800797291, 41.85914214745469, 93.8172051811137, 25.45609341971064</code>).</p>
         <pre>
-Waypoint: /float/n/[size]
+Endpoint: /float/n/[size]
 Method: GET
 Request URL: /float/n/5
 Response: {
@@ -306,7 +306,7 @@ Response: {
 </pre>
         <p>Generates an array of float between 0 to specified maximum value (eg. <code>9.064950325955225, 3.4132496692675707, 1.2844241113079014, 2.6765697910059916, 0.07970961474096039</code> between 0-10).</p>
         <pre>
-Waypoint: /float/[max]/n/[size]
+Endpoint: /float/[max]/n/[size]
 Method: GET
 Request URL: /float/10/n/5
 Response: {
@@ -322,7 +322,7 @@ Response: {
 </pre>
         <p>Generates an array of random float between specified minimum and maximum value (eg. <code>7.135951319183798, 7.648329940982908, 8.892773190520067, 5.8627358636851845, 7.100143100361123</code> between 5-10).</p>
         <pre>
-Waypoint: /float/[min]/[max]/n/[size]
+Endpoint: /float/[min]/[max]/n/[size]
 Method: GET
 Request URL: /float/5/10/n/5
 Response: {
